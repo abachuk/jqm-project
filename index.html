@@ -34,8 +34,11 @@
     </div><!-- /#header -->
 
     <div id="home-content" data-role="content">
-    	<input type="search" placeholder="search twitter">
-    	<a data-role="button" href="#">Search</a>
+    	<input type="search" placeholder="search twitter" id="search-term">
+    	<a data-role="button" href="#" id="search-button">Search</a>
+        <ul id="twitter-results" data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+
+        </ul>
     </div><!-- /#home-page -->
 
     <div id="footer" data-role="footer">
@@ -43,7 +46,24 @@
     </div><!-- /#footer -->
     </div>
 
+        <script id="twitter-template" type="text/template">
+            <% _.each(results, function(tweet){ %>
+                <li class="ui-btn ui-btn-icon-right ui-li ui-li-has-thumb ui-btn-up-c" data-icon="false">
+                    <div class="ui-btn-inner ui-li">
+                        <div class="ui-btn-text">
+                            <a href="#" class="ui-link-inherit">
+                                <img src="https://api.twitter.com/1/users/profile_image?screen_name=<%= tweet.from_user %>&size=bigger" class="ui-li-thumb">
+                                <h2 class="ui-li-heading">@<%= tweet.from_user %></h2>
+                                <p class="ui-li-desc"><%= tweet.text %></p>
+                            </a>
+                        </div>
+                    </div>
+            <% }); %>
+
+        </script>
+
 	  <script src="js/jquery.js"></script>
+      <script src="js/underscore.js"></script>
 	  <script src="js/jquery-mobile.js"></script>
 	  <script src="js/script.js"></script>
     </body>
