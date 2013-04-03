@@ -28,16 +28,18 @@
     </head>
     <body>
 
-    <div id="about-page" data-role="page">
+    <div id="contact-handle" data-role="page">
     <div data-role="header">
     	<h1><i class="icon-home"></i> Header</h1>
     </div><!-- /#header -->
 
-    <div id="about-content" data-role="content">
-    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer interdum dictum augue, et viverra nunc gravida sit amet. Nulla at magna velit. Quisque eu justo augue, faucibus viverra velit. Nam vel nulla at nulla semper tempor. Suspendisse sagittis ultricies lacinia. Cras a facilisis nisi. Phasellus dignissim bibendum enim in volutpat. Ut id tellus vitae nisi aliquet hendrerit sed vel turpis. Sed vel libero est, sit amet cursus urna. Donec fermentum tellus nec nisi luctus porta. Nullam quis tellus felis. Ut feugiat tellus vehicula tortor congue nec facilisis risus tristique. Maecenas quis mauris mauris, ac luctus nisl. Vivamus odio diam, porttitor sed placerat quis, porta mollis dui. Sed sed placerat ligula.</p>
-        <img src="http://placekitten.com/350/300" class="alignleft">
-        <p>Aenean non elementum elit. Cras sapien lacus, facilisis vel gravida nec, euismod et risus. Mauris condimentum pretium odio id condimentum. Quisque venenatis orci non nisi tristique gravida. Nulla posuere ipsum vitae nulla convallis consectetur. Duis lacus turpis, aliquet sed eleifend nec, faucibus in justo. Curabitur vel metus in enim rutrum rutrum. Aenean sed scelerisque arcu. Sed suscipit, diam non cursus auctor, nibh ipsum convallis urna, eu malesuada massa odio id tortor.</p>
-    </div><!-- /#home-page -->
+    <div id="contact-content" data-role="content">
+    	<ul data-role="listview" data-inset="true">
+    		<li>Your name: <?php echo $_POST["name"]; ?></li>
+    		<li>Your email: <?php echo $_POST["email"]; ?></li>
+    		<li>Time: <?php echo $_POST["select-choice-1"]; ?></li>
+    	</ul>
+    </div><!-- /#contact-page -->
 
     <div data-role="footer">
         <div data-role="navbar" class="nav-glyphish-example">
@@ -45,6 +47,7 @@
             <li><a href="index.html" id="home" data-icon="home" data-transition="slide">Home</a></li>
             <li><a href="about.html" id="about" data-icon="info" data-transition="flip">About</a></li>
             <li><a href="contact.html" id="contact" data-icon="star" data-transition="pop">Contact</a></li>
+
         </ul>
         </div>
     	<h1><i class="icon-coffee"></i> 2013 - jQuery Mobile starting template</h1>
@@ -52,7 +55,6 @@
     </div>
 
 	  <script src="js/jquery.js"></script>
-
       <script src="js/jquery-mobile.js"></script>
        <script src="js/underscore.js"></script>
       <script src="js/script.js"></script>

@@ -28,16 +28,23 @@
     </head>
     <body>
 
-    <div id="about-page" data-role="page">
+    <div id="contact-page" data-role="page">
     <div data-role="header">
     	<h1><i class="icon-home"></i> Header</h1>
     </div><!-- /#header -->
 
-    <div id="about-content" data-role="content">
-    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer interdum dictum augue, et viverra nunc gravida sit amet. Nulla at magna velit. Quisque eu justo augue, faucibus viverra velit. Nam vel nulla at nulla semper tempor. Suspendisse sagittis ultricies lacinia. Cras a facilisis nisi. Phasellus dignissim bibendum enim in volutpat. Ut id tellus vitae nisi aliquet hendrerit sed vel turpis. Sed vel libero est, sit amet cursus urna. Donec fermentum tellus nec nisi luctus porta. Nullam quis tellus felis. Ut feugiat tellus vehicula tortor congue nec facilisis risus tristique. Maecenas quis mauris mauris, ac luctus nisl. Vivamus odio diam, porttitor sed placerat quis, porta mollis dui. Sed sed placerat ligula.</p>
-        <img src="http://placekitten.com/350/300" class="alignleft">
-        <p>Aenean non elementum elit. Cras sapien lacus, facilisis vel gravida nec, euismod et risus. Mauris condimentum pretium odio id condimentum. Quisque venenatis orci non nisi tristique gravida. Nulla posuere ipsum vitae nulla convallis consectetur. Duis lacus turpis, aliquet sed eleifend nec, faucibus in justo. Curabitur vel metus in enim rutrum rutrum. Aenean sed scelerisque arcu. Sed suscipit, diam non cursus auctor, nibh ipsum convallis urna, eu malesuada massa odio id tortor.</p>
-    </div><!-- /#home-page -->
+    <div id="contact-content" data-role="content">
+        <form action="contact.php" method="post">
+            <input type="text" placeholder="name" id="name" name="name">
+            <input type="email" placeholder="email" id="email" name="email">
+            <select name="select-choice-1" id="select-choice-1">
+                <option value="today">today</option>
+                <option value="tomorrow">tomorrow</option>
+                <option value="week">in 1 week</option>
+            </select>
+            <input type="submit" value="Submit" data-theme="b">
+        <form>
+    </div><!-- /#contact-page -->
 
     <div data-role="footer">
         <div data-role="navbar" class="nav-glyphish-example">
@@ -52,7 +59,6 @@
     </div>
 
 	  <script src="js/jquery.js"></script>
-
       <script src="js/jquery-mobile.js"></script>
        <script src="js/underscore.js"></script>
       <script src="js/script.js"></script>

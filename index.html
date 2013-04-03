@@ -45,19 +45,17 @@
 
         <div data-role="navbar" class="nav-glyphish-example">
         <ul>
-            <li><a href="index.html" id="home" data-icon="home">Home</a></li>
-            <li><a href="about.html" id="about" data-icon="info">About</a></li>
-            <li><a href="contact.html" id="contact" data-icon="star">Contact</a></li>
-            <li><a href="gallery.html" id="gallery" data-icon="grid">Gallery</a></li>
+            <li><a href="index.html" id="home" data-icon="home" data-transition="slide">Home</a></li>
+            <li><a href="about.html" id="about" data-icon="info" data-transition="flip">About</a></li>
+            <li><a href="contact.html" id="contact" data-icon="star" data-transition="pop">Contact</a></li>
         </ul>
         </div>
 
     	<h1><i class="icon-coffee"></i> 2013 - jQuery Mobile starting template</h1>
 
     </div><!-- /#footer -->
-    </div>
 
-        <script id="twitter-template" type="text/template">
+    <script id="twitter-template" type="text/template">
             <% _.each(results, function(tweet){ %>
                 <li class="ui-btn ui-btn-icon-right ui-li ui-li-has-thumb ui-btn-up-c" data-icon="false">
                     <div class="ui-btn-inner ui-li">
@@ -73,9 +71,13 @@
 
         </script>
 
+    </div><!-- end page -->
+
+
+
 	  <script src="js/jquery.js"></script>
-      <script src="js/underscore.js"></script>
 	  <script src="js/jquery-mobile.js"></script>
+      <script src="js/underscore.js"></script>
 	  <script src="js/script.js"></script>
     </body>
 </html>
