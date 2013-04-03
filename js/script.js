@@ -14,6 +14,7 @@ $( document ).delegate("#home-page", "pageinit", function() {
 				var template = _.template($('#twitter-template').html());
 				results = data.results;
 				$('#twitter-results').html(template(results));
+				//$('ul').listview('refresh');
 				console.log(data.results);
 			},
 			error: function (data) {
